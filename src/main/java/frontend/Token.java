@@ -1,5 +1,7 @@
 package frontend;
 
+import java.io.IOException;
+
 /**
  * Represents a semantic unit of the target language to be
  * used by the parser and scanner.
@@ -16,11 +18,11 @@ public abstract class Token {
     // TODO:
     protected abstract void extract();
 
-    protected char currentChar() {
+    protected char currentChar() throws IOException {
         return source.currentChar();
     }
 
-    protected char nextChar() {
+    protected char nextChar() throws IOException {
         return source.nextChar();
     }
 

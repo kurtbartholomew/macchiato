@@ -1,5 +1,7 @@
 package frontend;
 
+import java.io.IOException;
+
 /**
  * Lexically analyzes input and creates tokens for usage
  * by the parser.
@@ -19,15 +21,15 @@ public class Scanner {
     }
 
     // TODO:
-    protected Token extractToken() {
+    protected Token extractToken() throws IOException {
         return currentToken;
     }
 
-    public char currentChar() {
+    public char currentChar() throws IOException {
         return source.currentChar();
     }
 
-    public char nextChar() {
+    public char nextChar() throws IOException {
         return source.nextChar();
     }
 }
