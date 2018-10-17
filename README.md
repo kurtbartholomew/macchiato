@@ -1,6 +1,6 @@
 # Macchiato
 
-A compiler / interpreter to transpiling to the Java Virtual Machine
+A compiler / interpreter for transpiling to the Java Virtual Machine
 
 ### Made with:
  - Java 10
