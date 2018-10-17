@@ -1,5 +1,9 @@
 package frontend;
 
+/**
+ * Lexically analyzes input and creates tokens for usage
+ * by the parser.
+ */
 public class Scanner {
 
     private Token currentToken;

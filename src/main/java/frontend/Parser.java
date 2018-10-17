@@ -4,7 +4,8 @@ import intermediate.ICode;
 import intermediate.SymTab;
 
 /**
- * Abstract parser to be implemented for specific languages
+ * Syntactically analyzes tokens from scanner and creates
+ * Intermediate Representation code (IR)
  */
 public abstract class Parser {
 

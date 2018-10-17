@@ -1,5 +1,9 @@
 package frontend;
 
+/**
+ * Represents a semantic unit of the target language to be
+ * used by the parser and scanner.
+ */
 public abstract class Token {
 
     protected Source source;

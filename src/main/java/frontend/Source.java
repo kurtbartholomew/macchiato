@@ -2,6 +2,10 @@ package frontend;
 
 import java.io.BufferedReader;
 
+/**
+ * Wrapper around source file(s) to extract characters
+ * and tokens.
+ */
 public class Source {
 
     private BufferedReader reader;
