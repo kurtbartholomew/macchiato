@@ -7,11 +7,12 @@ import intermediate.SymTab;
  * Syntactically analyzes tokens from scanner and creates
  * Intermediate Representation code (IR)
  */
-public abstract class Parser {
+public abstract class Parser implements MessageProducer {
 
     protected Scanner scanner;
     protected ICode iCode;
     protected static SymTab symTab = null;
+    protected static MessageHandler messageHandler = new MessageHandler();
 
     public Parser(Scanner scanner) {
         this.scanner = scanner;
@@ -29,5 +30,17 @@ public abstract class Parser {
 
     public Token nextToken() throws Exception {
         return scanner.nextToken();
+    }
+
+    public void addMessageListener(MessageListener listener) {
+        messageHandler.addListener(listener);
+    }
+
+    public void removeMessageListener(MessageListener listener) {
+        messageHandler.removeListener(listener);
+    }
+
+    public void sendMessage(Message message) {
+        messageHandler.sendMessage(message);
     }
 }

@@ -3,11 +3,13 @@ package frontend;
 import java.io.BufferedReader;
 import java.io.IOException;
 
+import static frontend.MessageType.SOURCE_LINE;
+
 /**
  * Wrapper around source file(s) to extract characters
  * and tokens.
  */
-public class Source {
+public class Source implements MessageProducer {
 
     public static final char EOL = '\n';
     public static final char EOF = (char) 0;
@@ -77,6 +79,10 @@ public class Source {
 
         if(line != null) {
             ++lineNum;
+        }
+
+        if(line != null) {
+            sendMessage(new Message(SOURCE_LINE), new Object[]{lineNum, line});
         }
     }
 
