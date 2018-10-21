@@ -25,6 +25,14 @@ public class Source {
         this.currentPos = SOURCE_NOT_INITIALIZED;
     }
 
+    public int getLineNum() {
+        return this.lineNum;
+    }
+
+    public int getPosition() {
+        return this.currentPos;
+    }
+
     public char currentChar() throws IOException {
         if(currentPos == SOURCE_NOT_INITIALIZED) {
             readLine();
