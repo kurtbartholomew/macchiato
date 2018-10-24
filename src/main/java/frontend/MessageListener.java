@@ -1,5 +1,5 @@
 package frontend;
 
 public interface MessageListener {
-    public void messageReceived(Message message);
+    void messageReceived(Message message);
 }

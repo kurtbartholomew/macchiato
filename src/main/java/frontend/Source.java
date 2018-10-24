@@ -16,6 +16,8 @@ public class Source implements MessageProducer {
     public static final int SOURCE_NOT_INITIALIZED = -2;
     public static final int LINE_NOT_INITIALIZED = -1;
 
+    protected static MessageHandler messageHandler = new MessageHandler();
+
     private BufferedReader reader;
     private String line;
     private int lineNum;
@@ -82,7 +84,7 @@ public class Source implements MessageProducer {
         }
 
         if(line != null) {
-            sendMessage(new Message(SOURCE_LINE), new Object[]{lineNum, line});
+            sendMessage(new Message(SOURCE_LINE, new Object[]{lineNum, line}));
         }
     }
 
@@ -95,5 +97,17 @@ public class Source implements MessageProducer {
                 throw e;
             }
         }
+    }
+
+    public void sendMessage(Message message) {
+        messageHandler.sendMessage(message);
+    }
+
+    public void addMessageListener(MessageListener messageListener) {
+        messageHandler.addListener(messageListener);
+    }
+
+    public void removeMessageListener(MessageListener messageListener) {
+        messageHandler.removeListener(messageListener);
     }
 }

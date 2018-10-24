@@ -2,7 +2,7 @@ package frontend;
 
 public interface MessageProducer {
 
-    public void addMessageListener(MessageListener listener);
-    public void removeMessageListener(MessageListener listener);
-    public void sendMessage(Message message);
+    void addMessageListener(MessageListener listener);
+    void removeMessageListener(MessageListener listener);
+    void sendMessage(Message message);
 }
