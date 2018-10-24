@@ -1,4 +1,7 @@
-package frontend;
+package message;
+
+import message.Message;
+import message.MessageListener;
 
 public interface MessageProducer {
 

@@ -1,9 +1,14 @@
 package frontend;
 
+import message.Message;
+import message.MessageHandler;
+import message.MessageListener;
+import message.MessageProducer;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 
-import static frontend.MessageType.SOURCE_LINE;
+import static message.MessageType.SOURCE_LINE;
 
 /**
  * Wrapper around source file(s) to extract characters

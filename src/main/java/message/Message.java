@@ -1,4 +1,4 @@
-package frontend;
+package message;
 
 public class Message {
 

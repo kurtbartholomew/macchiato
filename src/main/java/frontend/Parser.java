@@ -2,6 +2,10 @@ package frontend;
 
 import intermediate.ICode;
 import intermediate.SymTab;
+import message.Message;
+import message.MessageHandler;
+import message.MessageListener;
+import message.MessageProducer;
 
 /**
  * Syntactically analyzes tokens from scanner and creates

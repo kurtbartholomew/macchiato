@@ -1,4 +1,4 @@
-package frontend;
+package message;
 
 import java.util.ArrayList;
 
