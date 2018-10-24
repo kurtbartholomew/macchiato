@@ -6,6 +6,7 @@ import message.Message;
 import message.MessageHandler;
 import message.MessageListener;
 import message.MessageProducer;
+import java.io.*;
 
 /**
  * Syntactically analyzes tokens from scanner and creates
@@ -23,7 +24,7 @@ public abstract class Parser implements MessageProducer {
         this.iCode = null;
     }
 
-    public abstract void parse() throws Exception;
+    public abstract void parse() throws IOException;
 
     public abstract int getErrorCount();
 
@@ -32,7 +33,7 @@ public abstract class Parser implements MessageProducer {
         return scanner.currentToken();
     }
 
-    public Token nextToken() throws Exception {
+    public Token nextToken() throws IOException {
         return scanner.nextToken();
     }
 

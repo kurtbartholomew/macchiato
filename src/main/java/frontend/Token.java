@@ -41,4 +41,8 @@ public class Token {
     protected char peekChar() throws IOException {
         return source.peekChar();
     }
+
+    public int getLineNumber() {
+        return lineNum;
+    }
 }
